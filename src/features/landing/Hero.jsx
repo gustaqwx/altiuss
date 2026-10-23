@@ -7,11 +7,11 @@ export default function Hero() {
       <section id="programa" className="relative flex min-h-screen flex-col justify-center overflow-hidden px-5 pb-16 pt-32 md:px-10" aria-labelledby="t-programa">
         <div className="relative mx-auto w-full max-w-[90rem]">
           <div className="hero-fade mb-8 flex flex-wrap gap-3 text-sm text-mute">
-            <span className="inline-flex items-center gap-2 rounded-full border border-[color:var(--line)] px-3 py-1">
+            <span className="inline-flex items-center gap-2 rounded-md border border-[color:var(--line)] px-3 py-1">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
               Programa de 12 meses
             </span>
-            <span className="inline-flex items-center gap-2 rounded-full border border-[color:var(--line)] px-3 py-1">
+            <span className="inline-flex items-center gap-2 rounded-md border border-[color:var(--line)] px-3 py-1">
               <span className="h-1.5 w-1.5 rounded-full bg-signal" aria-hidden="true" />
               Baseado no Future of Jobs Report do WEF
             </span>
