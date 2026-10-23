@@ -1,21 +1,127 @@
-// Conteúdo dos benefícios (mantido do site). Ícones: mesma grade 24x24, traço 1.7.
-const BENEFITS = [
-  { id: 'trilhas', icon: 'route', title: 'Trilhas personalizadas', text: 'Percursos baseados no seu perfil diagnóstico.' },
-  { id: 'simulacoes', icon: 'check', title: 'Simulações de processos seletivos', text: 'Com feedback estruturado a cada rodada.' },
-  { id: 'mentoria', icon: 'users', title: 'Mentoria', text: 'Com profissionais de mercado da indústria tech.' },
-  { id: 'dashboard', icon: 'chart', title: 'Dashboard em tempo real', text: 'Para acompanhar a evolução das suas competências.' },
-  { id: 'projetos', icon: 'briefcase', title: 'Projetos aplicados', text: 'Com empresas parceiras.' },
-  { id: 'comunidade', icon: 'network', title: 'Comunidade viva', text: 'Hackathons e eventos exclusivos com recrutadores.' },
-]
+// Benefícios do programa: ordem por importancia para o aluno
+// Cada benefício tem uma capa DIFERENTE feita de fatos reais do programa (HTML/CSS, aria-hidden)
 
-const ICONS = {
-  route: <><circle cx="6" cy="18" r="2.5" /><circle cx="18" cy="6" r="2.5" /><path d="M8.5 18H15a3 3 0 000-6H9a3 3 0 010-6h6.5" /></>,
-  check: <><rect x="5" y="4" width="14" height="17" rx="2.5" /><path d="M9 4V3.5M15 4V3.5M9 13l2 2 4-4" /></>,
-  users: <><circle cx="9" cy="8" r="3.2" /><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6" /><circle cx="17.5" cy="9" r="2.4" /><path d="M17 14.2c2.4.3 4 2.2 4 4.8" /></>,
-  chart: <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" />,
-  briefcase: <><rect x="3" y="7" width="18" height="13" rx="2.5" /><path d="M9 7V5.5A1.5 1.5 0 0110.5 4h3A1.5 1.5 0 0115 5.5V7M3 13h18" /></>,
-  network: <><circle cx="12" cy="5" r="2.5" /><circle cx="5" cy="18" r="2.5" /><circle cx="19" cy="18" r="2.5" /><path d="M12 7.5V12M12 12l-5.5 4M12 12l5.5 4" /></>,
-}
+import NotchedCard from './NotchedCard'
+
+const BENEFITS = [
+  {
+    id: 'trilhas',
+    badge: 'Explorar',
+    title: 'Trilhas personalizadas',
+    description: 'Percurso adaptado ao seu perfil diagnóstico com módulos progressivos de hard e soft skills.',
+    labels: ['Hard skills', 'Soft skills'],
+    href: '#roadmap',
+    cover: (
+      <div className="nc-cover-inner" aria-hidden="true" style={{ '--surface': 'var(--ink)' }}>
+        <div className="nc-timeline-4">
+          {['Explorar', 'Desenvolver', 'Aplicar', 'Decolar'].map((phase, i) => (
+            <div key={phase} className="nc-phase" style={{ '--i': i }}>
+              <span className="nc-phase-dot" />
+              <span className="nc-phase-label">{phase}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    ),
+  },
+  {
+    id: 'mentoria',
+    badge: 'Quinzenal',
+    title: 'Mentoria quinzenal',
+    description: 'Sessões individuais e em grupo com profissionais de mercado da indústria tech.',
+    labels: ['Individual', 'Grupo'],
+    href: '#competencias',
+    cover: (
+      <div className="nc-cover-inner" aria-hidden="true" style={{ '--surface': 'var(--ink)' }}>
+        <div className="nc-timeline-quinzenal" aria-label="6 marcas quinzenais">
+          {[...Array(6)].map((_, i) => (
+            <span key={i} className="nc-qdot" style={{ '--odd': i % 2 === 0 }} />
+          ))}
+        </div>
+      </div>
+    ),
+  },
+  {
+    id: 'simulacoes',
+    badge: 'Simulação',
+    title: 'Simulações de processos seletivos',
+    description: 'Entrevistas técnicas e comportamentais com feedback estruturado a cada rodada.',
+    labels: ['Técnica', 'Comportamental'],
+    href: '#competencias',
+    cover: (
+      <div className="nc-cover-inner" aria-hidden="true" style={{ '--surface': 'var(--ink)' }}>
+        <div className="nc-dual-bars" aria-label="Live coding e fit cultural">
+          <div className="nc-bar-row">
+            <span className="nc-bar-label">Live coding</span>
+            <div className="nc-bar-track"><div className="nc-bar-fill" style={{ width: '65%' }} /></div>
+            <span className="nc-bar-value">A definir</span>
+          </div>
+          <div className="nc-bar-row">
+            <span className="nc-bar-label">Fit cultural</span>
+            <div className="nc-bar-track"><div className="nc-bar-fill" style={{ width: '78%' }} /></div>
+            <span className="nc-bar-value">A definir</span>
+          </div>
+        </div>
+      </div>
+    ),
+  },
+  {
+    id: 'dashboard',
+    badge: 'Dashboard',
+    title: 'Dashboard de competências',
+    description: 'Acompanhamento em tempo real das 6 habilidades do mapa WEF com metas e marcos.',
+    labels: ['Tempo real', 'Metas'],
+    href: '#competencias',
+    cover: (
+      <div className="nc-cover-inner" aria-hidden="true" style={{ '--surface': 'var(--ink)' }}>
+        <div className="nc-criteria-bars" aria-label="6 critérios com valores A definir">
+          {['Pensamento Analítico', 'IA & Big Data', 'Programação', 'Flexibilidade', 'Colaboração', 'Liderança'].map((c, i) => (
+            <div key={c} className="nc-criterion">
+              <span className="nc-crit-label">{c}</span>
+              <div className="nc-crit-track"><div className="nc-crit-fill" style={{ width: `${[15, 35, 55, 70, 45, 25][i]}%` }} /></div>
+              <span className="nc-crit-value">A definir</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    ),
+  },
+  {
+    id: 'projetos',
+    badge: 'Fase 3',
+    title: 'Projetos aplicados',
+    description: 'Desafios reais de empresas parceiras na Fase 3 (meses 6 a 9) geram portfólio e networking.',
+    labels: ['Portfólio', 'Networking'],
+    href: '#roadmap',
+    cover: (
+      <div className="nc-cover-inner" aria-hidden="true" style={{ '--surface': 'var(--ink)' }}>
+        <ul className="nc-deliverables" aria-label="Entregas de exemplo">
+          <li><span className="nc-del-dot" /> MVP funcional</li>
+          <li><span className="nc-del-dot" /> Documentação técnica</li>
+          <li><span className="nc-del-dot" /> Apresentação executiva</li>
+        </ul>
+        <span className="nc-example-tag">Exemplo</span>
+      </div>
+    ),
+  },
+  {
+    id: 'comunidade',
+    badge: 'Comunidade',
+    title: 'Comunidade e eventos',
+    description: 'Rede de ex-alunos, hackathons, workshops e encontros com recrutadores.',
+    labels: ['Ex-alunos', 'Recrutadores'],
+    href: null, // sem destino honesto → article sem link, sem seta, sem cursor pointer
+    cover: (
+      <div className="nc-cover-inner" aria-hidden="true" style={{ '--surface': 'var(--ink)' }}>
+        <div className="nc-squad-blocks" aria-label="Squads heterogêneos">
+          {[...Array(8)].map((_, i) => (
+            <div key={i} className="nc-squad-cell" style={{ '--n': i }} />
+          ))}
+        </div>
+      </div>
+    ),
+  },
+]
 
 export default function Benefits() {
   return (
@@ -25,14 +131,18 @@ export default function Benefits() {
           <h2 id="t-ben" className="ben-title">O que o programa oferece</h2>
           <p className="ben-sub">Seis frentes para você chegar à primeira vaga com preparo, prática e contatos.</p>
         </header>
-        <ul className="ben-grid">
+        <ul className="ben-grid" role="list">
           {BENEFITS.map((b) => (
             <li key={b.id} className="ben-card">
-              <span className="ben-ic" aria-hidden="true">
-                <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round">{ICONS[b.icon]}</svg>
-              </span>
-              <h3 className="ben-h">{b.title}</h3>
-              <p className="ben-p">{b.text}</p>
+              <NotchedCard
+                cover={b.cover}
+                badge={b.badge}
+                title={b.title}
+                description={b.description}
+                labels={b.labels}
+                href={b.href}
+                ariaLabel={b.title}
+              />
             </li>
           ))}
         </ul>
