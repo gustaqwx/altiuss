@@ -9,11 +9,7 @@ export default function Hero() {
           <div className="hero-fade mb-8 flex flex-wrap gap-3 text-sm text-mute">
             <span className="inline-flex items-center gap-2 rounded-md border border-[color:var(--line)] px-3 py-1">
               <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
-              Programa de 12 meses
-            </span>
-            <span className="inline-flex items-center gap-2 rounded-md border border-[color:var(--line)] px-3 py-1">
-              <span className="h-1.5 w-1.5 rounded-full bg-signal" aria-hidden="true" />
-              Baseado no Future of Jobs Report do WEF
+              4 fases · 6 competências WEF
             </span>
           </div>
           <div className="grid gap-x-10 gap-y-8 lg:grid-cols-[1fr_1.15fr] lg:grid-rows-[auto_auto] lg:items-center">
