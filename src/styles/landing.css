@@ -1,0 +1,74 @@
+:root {
+    --ink: #0B0B14; --night: #12121F; --accent: #A99BFF; --signal: #6F5FE8;
+    --snow: #E8EEF2; --mute: #8FA3B3;
+    --line: rgba(143, 163, 179, .2);
+    --header-h: 4.5rem;
+    color-scheme: dark;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + env(safe-area-inset-top, 0px)); height: 100%; }
+  body { margin: 0; min-height: 100%; background: var(--ink); color: var(--snow);
+         font-family: 'Space Grotesk', 'Segoe UI', sans-serif; letter-spacing: .005em; line-height: 1.6;
+         -webkit-font-smoothing: antialiased; overflow-x: clip; }
+  h1, h2, h3, .font-display { font-family: 'Plus Jakarta Sans', 'Trebuchet MS', sans-serif; letter-spacing: -.035em; }
+  ::selection { background: var(--accent); color: var(--ink); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+
+  /* Header fixo; cobre a barra de status em celulares */
+  .site-header { position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+                 padding-top: env(safe-area-inset-top, 0px);
+                 border-bottom: 1px solid transparent;
+                 transition: background-color .3s, border-color .3s; }
+  .site-header.is-scrolled { background: rgba(11, 11, 20, .92); border-color: var(--line);
+                             -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); }
+
+  /* Links: sublinhado fino que cresce a partir da esquerda */
+  .nav-link { position: relative; padding: .25rem 0; color: var(--mute); transition: color .2s; }
+  .nav-link::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 1px;
+                     background: var(--accent); transform: scaleX(0); transform-origin: left; transition: transform .35s ease; }
+  .nav-link:hover, .nav-link.is-active { color: var(--snow); }
+  .nav-link:hover::after, .nav-link.is-active::after { transform: scaleX(1); }
+
+  /* Botão: preenchimento violeta sobe do rodapé no hover */
+  .btn { position: relative; display: inline-flex; align-items: center; justify-content: center; overflow: hidden;
+         border: 1px solid var(--accent); border-radius: 999px; padding: .65rem 1.25rem; color: var(--accent);
+         font-weight: 500; line-height: 1.2; text-align: center; isolation: isolate; transition: color .3s; }
+  .btn::before { content: ""; position: absolute; inset: 0; background: var(--signal); z-index: -1;
+                 transform: translateY(101%); transition: transform .35s ease; }
+  .btn:hover, .btn:focus-visible { color: #fff; }
+  .btn:hover::before, .btn:focus-visible::before { transform: translateY(0); }
+
+  /* Competências (ticket 03) */
+  .comp-item { transition: border-color .3s; }
+  .comp-num { transition: color .3s; }
+  .comp-item.is-active { border-color: var(--accent); }
+  .comp-item.is-active .comp-num { color: var(--accent); }
+  .comp-body.is-open { display: block; }
+
+  /* Roadmap (ticket 05) */
+  .road-js .road-step { opacity: .35; transition: opacity .4s; }
+  .road-js .road-step.is-on { opacity: 1; }
+  .road-dot { transition: background-color .3s, border-color .3s; }
+  .road-step.is-on .road-dot { background: var(--accent); border-color: var(--accent); }
+
+  /* Micro-interações (ticket 06) */
+  .btn { transition: color .3s, transform .15s; }
+  .btn:active { transform: scale(.97); }
+
+  /* Competências em desktop com movimento reduzido: sem pin nem scroll horizontal, grade estática (ticket 07) */
+  @media (min-width: 1024px) and (prefers-reduced-motion: reduce) {
+    #comp-pin { height: auto !important; overflow: visible !important; }
+    #comp-view { overflow: visible !important; }
+    #comp-track { width: auto !important; flex-wrap: wrap; row-gap: 3rem; }
+    .comp-item { width: calc(33.333% - 1.4rem) !important; min-height: 0 !important; }
+  }
+
+  .menu-panel { display: none; }
+  .menu-panel.is-open { display: block; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+  }
