@@ -55,7 +55,7 @@ export default function AdminHomePage() {
     {error && <p className="workspace-error" role="alert">{error}</p>}
     {message && <p className="workspace-muted" role="status">{message}</p>}
     <section aria-label="Indicadores da plataforma">
-      {loading && !overview ? <p className="workspace-muted" role="status">Carregando indicadores…</p> : overview && <dl className="workspace-metrics workspace-admin-metrics">{metrics.map(([label, value]) => <div key={label}><dt>{label}{overview.isExample ? ' · Exemplo' : ''}</dt><dd>{value ?? '—'}</dd></div>)}</dl>}
+      {loading && !overview ? <p className="workspace-muted" role="status">Carregando indicadores…</p> : overview && <dl className="workspace-metrics workspace-admin-metrics">{metrics.map(([label, value]) => <div key={label}><dt>{label}{overview.isExample ? ' · Exemplo' : ''}</dt><dd>{value ?? 'sem dado'}</dd></div>)}</dl>}
     </section>
     <section className="workspace-section" aria-labelledby="admin-shortcuts-title"><div className="workspace-section-heading"><h2 id="admin-shortcuts-title">Gestão</h2></div><ul className="workspace-admin-links">{adminShortcuts.map((item) => <li key={item.href}><Link to={item.href}><span><strong>{item.title}</strong><small>{item.description}</small></span><ArrowRight size={16} aria-hidden="true" /></Link></li>)}</ul></section>
     <section className="workspace-section" aria-labelledby="promote-users-title"><div className="workspace-section-heading"><div><h2 id="promote-users-title">Promover usuários</h2><p>Novos cadastros começam como Aluno. Promoções são registradas no servidor.</p></div><span>{students.length} alunos</span></div>

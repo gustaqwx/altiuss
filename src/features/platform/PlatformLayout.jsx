@@ -4,6 +4,7 @@ import { Link, NavLink, Outlet, useLocation } from 'react-router-dom'
 import { useAuth } from '../auth/AuthProvider'
 import { roleLabels } from '../../lib/model'
 import { platformApi } from '../journey/api'
+import AssistantButton from '../../features/assistant/AssistantButton'
 
 const navigation = {
   student: [
@@ -49,6 +50,7 @@ export default function PlatformLayout() {
           <div className="workspace-topbar-actions">
             <Link to="/app/notificacoes" className="workspace-notification-link"><MessageSquareText size={17} aria-hidden="true" /><span>Notificações</span></Link>
             <span className="workspace-user-name">{user?.name}</span>
+            <AssistantButton role={role} />
             <button type="button" className="workspace-mobile-menu-button" aria-expanded={mobileMenuOpen} aria-controls="workspace-mobile-nav" onClick={() => setMobileMenuOpen((open) => !open)} aria-label={mobileMenuOpen ? 'Fechar navegação' : 'Abrir navegação'}>{mobileMenuOpen ? <X size={18} /> : <Menu size={18} />}</button>
           </div>
         </header>

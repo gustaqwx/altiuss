@@ -4,12 +4,12 @@ Esta pasta reúne a especificação inicial de produto e interação da platafor
 
 ## Ordem de leitura
 
-1. [00 — Rastreabilidade, perguntas abertas e glossário](00-rastreabilidade.md): visão geral dos IDs, matriz, nomes lógicos de dados, perguntas consolidadas e inconsistências.
-2. [01 — Levantamento de requisitos](01-levantamento-requisitos.md): contexto, perfis, requisitos, prioridades, regras, restrições e dependências.
-3. [02 — Mapeamento de processos](02-mapeamento-processos.md): AS-IS limitado às evidências e proposta TO-BE.
-4. [03 — Entrevistas](03-entrevistas.md): plano, roteiros abertos, modelos em branco e texto de consentimento a validar.
-5. [04 — Personas e histórias](04-personas-e-historias.md): personas hipotéticas, histórias e critérios de aceite.
-6. [05 — Prototipação](05-prototipacao.md): mapa de telas, estados, navegação, wireframes e acesso ao demo existente.
+1. [00: Rastreabilidade, perguntas abertas e glossário](00-rastreabilidade.md): visão geral dos IDs, matriz, nomes lógicos de dados, perguntas consolidadas e inconsistências.
+2. [01: Levantamento de requisitos](01-levantamento-requisitos.md): contexto, perfis, requisitos, prioridades, regras, restrições e dependências.
+3. [02: Mapeamento de processos](02-mapeamento-processos.md): AS-IS limitado às evidências e proposta TO-BE.
+4. [03: Entrevistas](03-entrevistas.md): plano, roteiros abertos, modelos em branco e texto de consentimento a validar.
+5. [04: Personas e histórias](04-personas-e-historias.md): personas hipotéticas, histórias e critérios de aceite.
+6. [05: Prototipação](05-prototipacao.md): mapa de telas, estados, navegação, wireframes e acesso ao demo existente.
 
 ## Convenções
 

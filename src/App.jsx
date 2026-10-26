@@ -4,6 +4,7 @@ import Landing from './pages/Landing'
 import PlatformEntry from './pages/PlatformEntry'
 import Checkout from './pages/Checkout'
 import AuthPage from './pages/AuthPage'
+import LegalPage from './pages/LegalPage'
 import { AuthProvider } from './features/auth/AuthProvider'
 import ProtectedRoute from './features/auth/ProtectedRoute'
 import AuthCallback from './features/auth/AuthCallback'
@@ -40,6 +41,8 @@ export default function App() {
     <Route path="/recuperar-senha" element={<AuthPage mode="recovery" />} />
     <Route path="/auth/callback" element={<AuthCallback />} />
     <Route path="/redefinir-senha" element={<AuthPage mode="reset" />} />
+    <Route path={routes.privacy} element={<LegalPage type="privacidade" />} />
+    <Route path={routes.terms} element={<LegalPage type="termos" />} />
     <Route element={<ProtectedRoute />}><Route element={<PlatformLayout />}>
       <Route path="/app" element={<PlatformHomePage />} />
       <Route path="/app/atividades/:id" element={<ProtectedRoute allowedRoles={['student']}><ActivityPage /></ProtectedRoute>} />

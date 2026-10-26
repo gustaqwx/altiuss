@@ -1,4 +1,4 @@
-# 05 — Prototipação
+# 05 :  Prototipação
 
 > **Status:** mapa e wireframes de referência. As telas da plataforma estão implementadas no frontend; operações reais dependem de configurar/aplicar Supabase. O modo demo é separado e não representa autenticação real.
 
@@ -12,27 +12,27 @@ Status significa presença no código atual, conferida em `src/App.jsx`, `src/pa
 
 | ID | Rota | Perfil com acesso | Histórias | Estados de UI necessários | Estado no código |
 |---|---|---|---|---|---|
-| TELA-01 | `/programa` | Público | US-23 | Conteúdo público; navegação móvel; foco e erro de navegação | **Implementado** — página pública do programa; acesso à plataforma e checkout permanecem disponíveis. |
-| TELA-02 | `/login`, `/registro`, `/recuperar-senha` | Público; se autenticado, segue para a área logada | US-01 a US-04 | Carregando; validação; serviço indisponível; erro; sessão existente; opção demo quando habilitada | **Parcial** — formulários/rotas existem; ações reais ficam indisponíveis sem provedor. Demo aparece somente quando habilitada em ambiente não produtivo. |
-| TELA-03 | `/app` | Aluno, Mentor, Instrutor e Admin | US-03 a US-07, US-15 | Vazio; carregando; erro; sem permissão; conteúdo indefinido; dados demo | **Implementado** — página inicial contextual por perfil, conectada aos adaptadores e às áreas existentes. |
-| TELA-04 | `/app/trilhas/:trailId` | Aluno associado à trilha | US-06, US-07 | Vazio; carregando; erro; sem permissão; conteúdo indefinido | **Não implementado** — navegação das fases e aulas existe; trilhas personalizadas não foram definidas. |
-| TELA-05 | `/app/aulas/:lessonId` | Aluno autenticado e matriculado; Mentor conforme permissão | US-06, US-07, US-26, US-38 | Vazio; carregando; erro; sem permissão; vídeo indisponível; botão manual de conclusão | **Implementado** — player YouTube e conclusão manual; RLS depende de aplicação. |
-| TELA-06 | `/app/atividades/:activityId` | Aluno dono ou participante autorizado | US-08 a US-10, US-14 | Vazio; carregando; erro; sem permissão; envio inválido; prazo vencido conforme política; revisão/feedback | **Implementado** — atividade, envio de texto/link, versões e feedback; upload de arquivo não configurado. |
-| TELA-07 | `/app/squads/:squadId` | Alunos participantes e Mentor autorizado | US-11 | Vazio; carregando; erro; sem permissão; grupo ou regra ainda indefinida | **Planejado** — squad não existe no modelo ou código. |
-| TELA-08 | `/app/mentor` | Mentor; Admin conforme escopo definido | US-12 | Fila vazia; carregando; erro; sem permissão; sem alunos associados | **Implementado** — fila e revisão por papel; backend remoto pendente. |
-| TELA-09 | `/app/mentor/revisoes/:submissionId` | Mentor associado; Admin conforme escopo definido | US-13 | Carregando; erro; sem permissão; critério indefinido; revisão salva; falha ao salvar | **Implementado** — revisão por critério, comentário, aprovação ou pedido de ajustes. |
-| TELA-10 | `/app/mentor/mentorias` | Mentor associado; Aluno conforme política de consulta | US-16 | Lista vazia; carregando; erro; sem permissão; confirmação de gravação | **Implementado** — registro de mentoria limitado a data e anotações. |
-| TELA-11 | `/app/mentor/entrevistas/:simulationId` | Mentor/avaliador autorizado; Aluno consulta devolutiva | US-17 | Vazio; carregando; erro; sem permissão; critério indefinido | **Não implementado** — formato e critérios seguem A definir com a Altius. |
-| TELA-12 | `/app/admin` | Admin | US-18 a US-20 | Vazio; carregando; erro; sem permissão; confirmação de alteração; falha ao salvar | **Implementado** — visão geral, promoção e associação; depende de migration aplicada. |
-| TELA-13 | `/app/notificacoes` ou painel de notificações | Usuário autenticado, limitado aos próprios avisos | US-21 | Vazio; carregando; erro; aviso lido/não lido; sem permissão | **Implementado** — notificações in-app ao receber feedback. |
-| TELA-14 | Rodapé da área logada, expansível | Usuário da demonstração | US-22 | Recolhido/expandido; ausência fora do modo demo | **Implementado** — terminal recolhível com logs de exemplo rotulados na área logada. |
-| TELA-15 | `/checkout` | Público | US-23 | Dados, pagamento indisponível, erro e confirmação bloqueada conforme configuração | **Parcial** — fluxo/interface de checkout existe; pagamento depende de valor e provedor não configurados. |
-| TELA-16 | `/app/admin/aulas` | Admin e Instrutor; Instrutor cria/edita/exclui apenas aulas próprias | US-24, US-25 | Vazio; carregando; erro; link inválido; metadados encontrados/não verificados; rascunho/publicada; confirmação de exclusão; sem permissão | **Implementado** — gestão por Admin/Instrutor com ownership aplicado via RLS no servidor. |
-| TELA-17 | `/app/alunos` | Admin; Instrutor via RPC com campos limitados | US-30 | Vazio; carregando; erro; sem permissão; lista Admin completa; lista Instrutor com nome/fase/progresso/última atividade | **Implementado** — Admin recebe lista completa; Instrutor recebe apenas campos permitidos via RPC. |
-| TELA-18 | `/app/ao-vivo` | Admin e Instrutor; Instrutor somente sessões próprias | US-27, US-29 | Vazio; carregando; erro; formulário meeting/youtube_live; cancelada; confirmação; sem permissão | **Implementado** — gestão e listagem de sessões ao vivo por Admin/Instrutor. |
-| TELA-19 | `/app/ao-vivo/:id` | Usuário autenticado matriculado; Admin e Instrutor dono para operação | US-28, US-29 | Agendada; aviso pré-início; em andamento; cancelada; gravação vinculada; falha de player; sem matrícula | **Implementado** — meeting/YouTube Live, matrícula, horários e estado cancelado. |
-| TELA-20 | `/app/mentores` | Admin | US-18 a US-20 | Vazio; carregando; erro; sem permissão; confirmação de associação | **Implementado** — diretório restrito ao Admin. |
-| TELA-21 | `/app/equipe` | Admin | US-18 a US-20 | Vazio; carregando; erro; sem permissão | **Implementado** — diretório de equipe restrito ao Admin. |
+| TELA-01 | `/programa` | Público | US-23 | Conteúdo público; navegação móvel; foco e erro de navegação | **Implementado** :  página pública do programa; acesso à plataforma e checkout permanecem disponíveis. |
+| TELA-02 | `/login`, `/registro`, `/recuperar-senha` | Público; se autenticado, segue para a área logada | US-01 a US-04 | Carregando; validação; serviço indisponível; erro; sessão existente; opção demo quando habilitada | **Parcial** :  formulários/rotas existem; ações reais ficam indisponíveis sem provedor. Demo aparece somente quando habilitada em ambiente não produtivo. |
+| TELA-03 | `/app` | Aluno, Mentor, Instrutor e Admin | US-03 a US-07, US-15 | Vazio; carregando; erro; sem permissão; conteúdo indefinido; dados demo | **Implementado** :  página inicial contextual por perfil, conectada aos adaptadores e às áreas existentes. |
+| TELA-04 | `/app/trilhas/:trailId` | Aluno associado à trilha | US-06, US-07 | Vazio; carregando; erro; sem permissão; conteúdo indefinido | **Não implementado** :  navegação das fases e aulas existe; trilhas personalizadas não foram definidas. |
+| TELA-05 | `/app/aulas/:lessonId` | Aluno autenticado e matriculado; Mentor conforme permissão | US-06, US-07, US-26, US-38 | Vazio; carregando; erro; sem permissão; vídeo indisponível; botão manual de conclusão | **Implementado** :  player YouTube e conclusão manual; RLS depende de aplicação. |
+| TELA-06 | `/app/atividades/:activityId` | Aluno dono ou participante autorizado | US-08 a US-10, US-14 | Vazio; carregando; erro; sem permissão; envio inválido; prazo vencido conforme política; revisão/feedback | **Implementado** :  atividade, envio de texto/link, versões e feedback; upload de arquivo não configurado. |
+| TELA-07 | `/app/squads/:squadId` | Alunos participantes e Mentor autorizado | US-11 | Vazio; carregando; erro; sem permissão; grupo ou regra ainda indefinida | **Planejado** :  squad não existe no modelo ou código. |
+| TELA-08 | `/app/mentor` | Mentor; Admin conforme escopo definido | US-12 | Fila vazia; carregando; erro; sem permissão; sem alunos associados | **Implementado** :  fila e revisão por papel; backend remoto pendente. |
+| TELA-09 | `/app/mentor/revisoes/:submissionId` | Mentor associado; Admin conforme escopo definido | US-13 | Carregando; erro; sem permissão; critério indefinido; revisão salva; falha ao salvar | **Implementado** :  revisão por critério, comentário, aprovação ou pedido de ajustes. |
+| TELA-10 | `/app/mentor/mentorias` | Mentor associado; Aluno conforme política de consulta | US-16 | Lista vazia; carregando; erro; sem permissão; confirmação de gravação | **Implementado** :  registro de mentoria limitado a data e anotações. |
+| TELA-11 | `/app/mentor/entrevistas/:simulationId` | Mentor/avaliador autorizado; Aluno consulta devolutiva | US-17 | Vazio; carregando; erro; sem permissão; critério indefinido | **Não implementado** :  formato e critérios seguem A definir com a Altius. |
+| TELA-12 | `/app/admin` | Admin | US-18 a US-20 | Vazio; carregando; erro; sem permissão; confirmação de alteração; falha ao salvar | **Implementado** :  visão geral, promoção e associação; depende de migration aplicada. |
+| TELA-13 | `/app/notificacoes` ou painel de notificações | Usuário autenticado, limitado aos próprios avisos | US-21 | Vazio; carregando; erro; aviso lido/não lido; sem permissão | **Implementado** :  notificações in-app ao receber feedback. |
+| TELA-14 | Rodapé da área logada, expansível | Usuário da demonstração | US-22 | Recolhido/expandido; ausência fora do modo demo | **Implementado** :  terminal recolhível com logs de exemplo rotulados na área logada. |
+| TELA-15 | `/checkout` | Público | US-23 | Dados, pagamento indisponível, erro e confirmação bloqueada conforme configuração | **Parcial** :  fluxo/interface de checkout existe; pagamento depende de valor e provedor não configurados. |
+| TELA-16 | `/app/admin/aulas` | Admin e Instrutor; Instrutor cria/edita/exclui apenas aulas próprias | US-24, US-25 | Vazio; carregando; erro; link inválido; metadados encontrados/não verificados; rascunho/publicada; confirmação de exclusão; sem permissão | **Implementado** :  gestão por Admin/Instrutor com ownership aplicado via RLS no servidor. |
+| TELA-17 | `/app/alunos` | Admin; Instrutor via RPC com campos limitados | US-30 | Vazio; carregando; erro; sem permissão; lista Admin completa; lista Instrutor com nome/fase/progresso/última atividade | **Implementado** :  Admin recebe lista completa; Instrutor recebe apenas campos permitidos via RPC. |
+| TELA-18 | `/app/ao-vivo` | Admin e Instrutor; Instrutor somente sessões próprias | US-27, US-29 | Vazio; carregando; erro; formulário meeting/youtube_live; cancelada; confirmação; sem permissão | **Implementado** :  gestão e listagem de sessões ao vivo por Admin/Instrutor. |
+| TELA-19 | `/app/ao-vivo/:id` | Usuário autenticado matriculado; Admin e Instrutor dono para operação | US-28, US-29 | Agendada; aviso pré-início; em andamento; cancelada; gravação vinculada; falha de player; sem matrícula | **Implementado** :  meeting/YouTube Live, matrícula, horários e estado cancelado. |
+| TELA-20 | `/app/mentores` | Admin | US-18 a US-20 | Vazio; carregando; erro; sem permissão; confirmação de associação | **Implementado** :  diretório restrito ao Admin. |
+| TELA-21 | `/app/equipe` | Admin | US-18 a US-20 | Vazio; carregando; erro; sem permissão | **Implementado** :  diretório de equipe restrito ao Admin. |
 
 As rotas descritas correspondem ao frontend atual; segurança definitiva depende das policies RLS aplicadas no Supabase. Admin tem acesso completo à área. Instrutor não recebe telas de visão geral completa, mentores ou equipe e não vê e-mail, mentor, matrícula ou auditoria. O servidor deverá repetir toda autorização por RLS/RPC; a sidebar e guards não são segurança.
 
@@ -94,7 +94,7 @@ flowchart TD
 
 Wireframes representam estrutura, não visual final ou dados confirmados. Em todas as telas da plataforma: fundo `#090d16`, paleta violeta-grafite existente, bordas de 1px, foco visível, contraste AA, navegação por teclado e `prefers-reduced-motion`. Conteúdo ausente fica marcado “A definir com a Altius”.
 
-### TELA-03 — Jornada do aluno
+### TELA-03 :  Jornada do aluno
 
 ```text
 ┌────────── Altius Directio ──────────┬────────────────────────────────────┐
@@ -118,7 +118,7 @@ Wireframes representam estrutura, não visual final ou dados confirmados. Em tod
 
 Em mobile, a navegação lateral deve virar navegação compacta acessível; nenhuma fase ou atividade depende de hover.
 
-### TELA-04 — Trilha
+### TELA-04 :  Trilha
 
 ```text
 ┌───────────────────────────────┐
@@ -127,30 +127,30 @@ Em mobile, a navegação lateral deve virar navegação compacta acessível; nen
 │ Descrição: A definir...       │
 │                               │
 │ Módulos                       │
-│ 01  Módulo — A definir        │
+│ 01  Módulo :  A definir        │
 │     Aulas e estado            │
-│ 02  Módulo — A definir        │
+│ 02  Módulo :  A definir        │
 │     Aulas e estado            │
 │                               │
 │ Estado vazio / erro / loading │
 └───────────────────────────────┘
 ```
 
-### TELA-05 — Aula
+### TELA-05 :  Aula
 
 ```text
 ┌─────────────────────────────────────────────────────────┐
 │ Breadcrumb: Jornada / Trilha / Aula                     │
-│ Título da aula — A definir com a Altius                 │
+│ Título da aula :  A definir com a Altius                 │
 │ Eixo: A definir com a Altius                              │
-│ Conteúdo da aula — A definir com a Altius                │
+│ Conteúdo da aula :  A definir com a Altius                │
 │ ┌────────────────── player YouTube 16:9 ───────────────┐ │
 │ │ vídeo carregado do ID validado                       │ │
 │ └──────────────────────────────────────────────────────┘ │
 │ Se falhar: “Não foi possível carregar o vídeo aqui”      │
 │ [Assistir no YouTube]                                    │
 │                                                         │
-│ [Marcar como concluída] — ação manual do aluno           │
+│ [Marcar como concluída] :  ação manual do aluno           │
 │ [Voltar à trilha]                         [Próxima aula] │
 └─────────────────────────────────────────────────────────┘
 ```
@@ -159,12 +159,12 @@ O player usa `https://www.youtube-nocookie.com/embed/{ID}?rel=0&modestbranding=1
 
 Não presumir formato de mídia, duração, hospedagem de vídeo ou editor de código na plataforma.
 
-### TELA-06 — Atividade e entrega
+### TELA-06 :  Atividade e entrega
 
 ```text
 ┌──────────────────────────────────────────────────────────┐
 │ Breadcrumb: Jornada / Fase / Atividade                   │
-│ Título — A definir com a Altius       Estado: [estado]   │
+│ Título :  A definir com a Altius       Estado: [estado]   │
 │ Prazo: A definir com a Altius                             │
 │ Enunciado: A definir com a Altius                         │
 │ Critérios: A definir com a Altius                         │
@@ -183,7 +183,7 @@ Não presumir formato de mídia, duração, hospedagem de vídeo ou editor de c�
 
 Validar se feedback pode ser rascunho, quais critérios são obrigatórios e se o conteúdo da versão fica congelado após envio. Upload só após adapter de storage.
 
-### TELA-07 — Entrega de squad
+### TELA-07 :  Entrega de squad
 
 ```text
 ┌───────────────────────────────────────────────────────┐
@@ -196,7 +196,7 @@ Validar se feedback pode ser rascunho, quais critérios são obrigatórios e se 
 └───────────────────────────────────────────────────────┘
 ```
 
-### TELA-08 — Área do mentor e fila
+### TELA-08 :  Área do mentor e fila
 
 ```text
 ┌───────────┬────────────────────────────────────────────┐
@@ -210,7 +210,7 @@ Validar se feedback pode ser rascunho, quais critérios são obrigatórios e se 
 └───────────┴────────────────────────────────────────────┘
 ```
 
-### TELA-09 — Revisão do mentor
+### TELA-09 :  Revisão do mentor
 
 ```text
 ┌─────────────────────────────────────────────────────────┐
@@ -225,7 +225,7 @@ Validar se feedback pode ser rascunho, quais critérios são obrigatórios e se 
 └─────────────────────────────────────────────────────────┘
 ```
 
-### TELA-10 e TELA-11 — Mentoria e simulação
+### TELA-10 e TELA-11 :  Mentoria e simulação
 
 ```text
 Mentoria quinzenal
@@ -243,7 +243,7 @@ Simulação de entrevista
 
 Não incluir interface de videochamada, hospedagem de gravação ou editor de código.
 
-### TELA-12 — Painel Admin
+### TELA-12 :  Painel Admin
 
 ```text
 ┌────────────┬────────────────────────────────────────────┐
@@ -260,7 +260,7 @@ Não incluir interface de videochamada, hospedagem de gravação ou editor de c�
 
 Admin tem acesso completo à área. O servidor/RPC valida promoção e associação. Dados do painel que ainda não foram definidos ficam “A definir com a Altius”. A lista completa de campos de Admin é **A definir com a Altius**.
 
-### TELA-16 — Cadastro de vídeo-aula (Admin/Instrutor)
+### TELA-16 :  Cadastro de vídeo-aula (Admin/Instrutor)
 
 ```text
 ┌───────────────────────────────────────────────────────────┐
@@ -279,7 +279,7 @@ Admin tem acesso completo à área. O servidor/RPC valida promoção e associaç
 
 `src/content/admin.js` deve fornecer instruções curtas: subir no YouTube Studio do canal Altius; escolher “Não listado”; ativar “Permitir incorporação”; não usar conteúdo confidencial. Excluir exige confirmação. Instrutor só altera aula própria; Admin administra qualquer uma. Aluno e Mentor veem apenas publicadas.
 
-### TELA-17 — Lista de alunos
+### TELA-17 :  Lista de alunos
 
 ```text
 Admin: lista completa conforme política administrativa aprovada
@@ -291,7 +291,7 @@ Instrutor (RPC restrita, sem acesso direto a profiles):
 
 A lista do Instrutor não deve conter filtros que permitam recuperar colunas vedadas, exportação com dados extras, e-mail, Mentor, situação da matrícula ou auditoria.
 
-### TELA-18 — Gestão de aulas ao vivo
+### TELA-18 :  Gestão de aulas ao vivo
 
 ```text
 ┌───────────────────────────────────────────────────────────┐
@@ -299,7 +299,7 @@ A lista do Instrutor não deve conter filtros que permitam recuperar colunas ved
 │ Modo [meeting | youtube_live]                             │
 │ meeting: URL https://...                                  │
 │ youtube_live: link/ID YouTube validado                    │
-│ Data e hora — exibida em America/Sao_Paulo                │
+│ Data e hora :  exibida em America/Sao_Paulo                │
 │ Status [Rascunho / Agendada / Cancelada / ... a definir]  │
 │ Gravação depois da aula [selecionar aula publicada]       │
 │ [Salvar] [Cancelar sessão…]                               │
@@ -309,7 +309,7 @@ A lista do Instrutor não deve conter filtros que permitam recuperar colunas ved
 
 Instrutor só cria/edita sessão própria e marca presença nas suas aulas. Admin pode administrar todas. Link `meeting_url` e ID de YouTube são mutuamente exclusivos conforme `mode`.
 
-### TELA-19 — Participação na aula ao vivo
+### TELA-19 :  Participação na aula ao vivo
 
 ```text
 ┌───────────────────────────────────────────────────────────┐

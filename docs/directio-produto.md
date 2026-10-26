@@ -66,25 +66,25 @@ Alinhadas ao mapa de habilidades do Fórum Econômico Mundial:
 
 ## 8. Roadmap do programa (12 meses)
 
-### Fase 1: Explorar (meses 1–2), "Diagnose & base"
+### Fase 1: Explorar (meses 1 a 2), "Diagnose & base"
 - Assessment de perfil
 - Fundamentos de TI
 - Autoconhecimento
 - Plano individual
 
-### Fase 2: Desenvolver (meses 3–5), "Capacitação intensiva"
+### Fase 2: Desenvolver (meses 3 a 5), "Capacitação intensiva"
 - Trilhas de hard skills
 - Workshops de soft skills
 - Projetos em grupo
 - Mentoria quinzenal
 
-### Fase 3: Aplicar (meses 6–9), "Imersão & prática"
+### Fase 3: Aplicar (meses 6 a 9), "Imersão & prática"
 - Projeto real em empresa
 - Hackathon interno
 - Simulação de entrevista
 - Portfólio técnico
 
-### Fase 4: Decolar (meses 10–12), "Empregabilidade"
+### Fase 4: Decolar (meses 10 a 12), "Empregabilidade"
 - LinkedIn & branding
 - Conexão com parceiros
 - Processo seletivo real

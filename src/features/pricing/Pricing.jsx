@@ -19,7 +19,7 @@ export default function Pricing() {
               <ul className="mt-6 flex-1 divide-y divide-[color:var(--line)] border-y border-[color:var(--line)] text-sm">
                 {(p.features ?? []).map((f) => <li key={f} className="py-3">{f}</li>)}
               </ul>
-              <Link to={routes.plan(p.id)} className="btn mt-8 self-start">Garanta sua vaga</Link>
+              <Link to={routes.plan(p.id)} className="btn mt-8 self-start">Começar agora</Link>
             </article>
           ))}
         </div>

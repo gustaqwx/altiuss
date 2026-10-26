@@ -15,13 +15,13 @@ function seed() {
   return {
     activities,
     lessons: [
-      { id: 'lesson-example-1', title: 'Fundamentos de TI — exemplo', description: 'Aula de demonstração; conteúdo e currículo: A definir com a Altius.', youtube_video_id: 'DEMOEXEMP01', axis: 'Explorar', position: 1, status: 'published', created_by: 'demo-instructor', isExample: true },
-      { id: 'lesson-example-2', title: 'Trilhas de hard skills — exemplo', description: 'Aula de demonstração; conteúdo: A definir com a Altius.', youtube_video_id: 'DEMOEXEMP02', axis: 'Desenvolver', position: 1, status: 'published', created_by: 'demo-instructor', isExample: true },
-      { id: 'lesson-example-3', title: 'Portfólio técnico — exemplo', description: 'Aula de demonstração; conteúdo: A definir com a Altius.', youtube_video_id: 'DEMOEXEMP03', axis: 'Aplicar', position: 1, status: 'draft', created_by: 'demo-instructor', isExample: true },
+      { id: 'lesson-example-1', title: 'Fundamentos de TI , exemplo', description: 'Aula de demonstração; conteúdo e currículo: A definir com a Altius.', youtube_video_id: 'DEMOEXEMP01', axis: 'Explorar', position: 1, status: 'published', created_by: 'demo-instructor', isExample: true },
+      { id: 'lesson-example-2', title: 'Trilhas de hard skills , exemplo', description: 'Aula de demonstração; conteúdo: A definir com a Altius.', youtube_video_id: 'DEMOEXEMP02', axis: 'Desenvolver', position: 1, status: 'published', created_by: 'demo-instructor', isExample: true },
+      { id: 'lesson-example-3', title: 'Portfólio técnico , exemplo', description: 'Aula de demonstração; conteúdo: A definir com a Altius.', youtube_video_id: 'DEMOEXEMP03', axis: 'Aplicar', position: 1, status: 'draft', created_by: 'demo-instructor', isExample: true },
     ],
     liveSessions: [
-      { id: 'live-example-meeting', title: 'Encontro ao vivo — exemplo', mode: 'meeting', meeting_url: 'https://example.com/sala-de-exemplo', youtube_video_id: null, starts_at: '2026-11-05T18:00:00-03:00', status: 'scheduled', created_by: 'demo-instructor', isExample: true },
-      { id: 'live-example-youtube', title: 'Transmissão ao vivo — exemplo', mode: 'youtube_live', meeting_url: null, youtube_video_id: 'DEMOEXEMP04', starts_at: '2026-11-12T18:00:00-03:00', status: 'scheduled', created_by: 'demo-instructor', isExample: true },
+      { id: 'live-example-meeting', title: 'Encontro ao vivo , exemplo', mode: 'meeting', meeting_url: 'https://example.com/sala-de-exemplo', youtube_video_id: null, starts_at: '2026-11-05T18:00:00-03:00', status: 'scheduled', created_by: 'demo-instructor', isExample: true },
+      { id: 'live-example-youtube', title: 'Transmissão ao vivo , exemplo', mode: 'youtube_live', meeting_url: null, youtube_video_id: 'DEMOEXEMP04', starts_at: '2026-11-12T18:00:00-03:00', status: 'scheduled', created_by: 'demo-instructor', isExample: true },
     ],
     people: [
       { id: 'demo-student', name: 'Ana Souza', role: 'student', phase: 'Desenvolver', progress: 28, lastActivity: 'Hoje', email: 'student@exemplo.invalid', enrollment: 'exemplo', mentor: 'Marina Costa' },

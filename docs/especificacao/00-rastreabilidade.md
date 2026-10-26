@@ -1,4 +1,4 @@
-# 00 — Rastreabilidade, perguntas abertas e glossário
+# 00: Rastreabilidade, perguntas abertas e glossário
 
 > **Status:** matriz de rastreabilidade do código e da migration versionada. Supabase/Postgres é a arquitetura especificada; migration/RLS/RPC estão em `supabase/`, mas ainda não foram aplicadas a um projeto da Altius.
 
@@ -9,9 +9,9 @@
 - **Planejado** indica ausência de implementação correspondente.
 - **Fora do escopo** indica exclusão expressa pelo usuário.
 - Nomes de tabela entre crases seguem a migration `supabase/migrations/202610210001_platform.sql`; precisam de validação ao aplicar e testar no Supabase da Altius.
-- “—” significa que não há tabela necessária para o requisito ou que a decisão depende da arquitetura.
+- "não se aplica" significa que não há tabela necessária para o requisito ou que a decisão depende da arquitetura.
 
-## 2. Matriz de rastreabilidade — requisitos funcionais
+## 2. Matriz de rastreabilidade: requisitos funcionais
 
 | Requisito | Histórias | Tela | Tabela lógica na migration | Status no código |
 |---|---|---|---|---|
@@ -19,8 +19,8 @@
 | RF-02 | US-02 | TELA-02 | Supabase Auth | Implementado no adaptador; Apple precisa de configuração externa |
 | RF-03 | US-02 | TELA-02 | Supabase Auth | Implementado no adaptador; requer Supabase configurado |
 | RF-04 | US-03, US-04, US-12, US-18, US-24, US-31 | TELA-02, TELA-03, TELA-08, TELA-12, TELA-16 | `profiles`, `mentor_students` | Implementado em código/migration; RLS precisa ser aplicada/testada |
-| RF-05 | US-03, US-22, US-32 | TELA-02, TELA-03, TELA-14, TELA-16 a TELA-19 | Fixtures/sessão transitória de demo | Implementado — quatro papéis e dados locais rotulados |
-| RF-06 | US-06, US-07 | TELA-04, TELA-05 | `lessons` | Parcial — catálogo de aulas implementado; trilhas/módulos personalizados A definir com a Altius |
+| RF-05 | US-03, US-22, US-32 | TELA-02, TELA-03, TELA-14, TELA-16 a TELA-19 | Fixtures/sessão transitória de demo | Implementado: quatro papéis e dados locais rotulados |
+| RF-06 | US-06, US-07 | TELA-04, TELA-05 | `lessons` | Parcial: catálogo de aulas implementado; trilhas/módulos personalizados A definir com a Altius |
 | RF-07 | US-05 a US-07 | TELA-03, TELA-04 | `phases`, `learner_journeys`, `phase_progress` | Implementado; progresso em demo e cálculo por entregas aprovadas |
 | RF-08 | US-08, US-09 | TELA-06 | `activities`, `activity_criteria` | Implementado com conteúdo ausente marcado “A definir com a Altius” |
 | RF-09 | US-09, US-10 | TELA-06 | `submissions`, `submission_versions`; metadados de storage | Implementado para texto/link e versões; upload não configurado |
@@ -28,33 +28,33 @@
 | RF-11 | US-11 | TELA-07 | `squads`, `squad_members`, `squad_activities` | Planejado |
 | RF-12 | US-12, US-13 | TELA-08, TELA-09 | `submission_versions`, `feedback`, `feedback_criteria` | Implementado no código; Supabase/RLS pendentes de aplicação |
 | RF-13 | US-13, US-14 | TELA-06, TELA-09 | `feedback`, `feedback_criteria` | Implementado; escala e critérios continuam a definir |
-| RF-14 | US-05, US-15 | TELA-03 | `competency_progress` | Parcial — competências e dados demonstrativos existem; avaliação real A definir com a Altius |
+| RF-14 | US-05, US-15 | TELA-03 | `competency_progress` | Parcial: competências e dados demonstrativos existem; avaliação real A definir com a Altius |
 | RF-15 | US-16 | TELA-10 | `mentorship_sessions` | Implementado no código; registros reais exigem Supabase |
 | RF-16 | US-17 | TELA-11 | `interview_simulations`, `interview_feedback` | Planejado |
 | RF-17 | US-18 a US-20 | TELA-12, TELA-20, TELA-21 | `profiles`, `mentor_students`, `audit_log` | Implementado em UI/RPC/migration; remoto pendente |
 | RF-18 | US-21 | TELA-13 | `notifications` | Implementado in-app; políticas de retenção a definir |
 | RF-19 | US-22 | TELA-14 | Nenhuma; logs de exemplo estáticos | Parcial |
-| RF-20 | US-23 | TELA-01, TELA-15 | `checkout_orders` somente se backend de cobrança vier a existir | Parcial — rota/interface; sem pagamento disponível |
-| RF-21 | — | — | — | Fora do escopo — quadro de vagas |
-| RF-22 | — | — | — | Fora do escopo — contato com empresas dentro da plataforma |
-| RF-23 | — | — | — | Fora do escopo nesta versão — envio de desafios de empresas |
-| RF-24 | — | — | — | Fora do escopo — chat |
-| RF-25 | — | — | — | Fora do escopo — videochamada |
-| RF-26 | US-26 | TELA-05 | `lessons.youtube_video_id` | Implementado no código — hospedagem fora; YouTube incorporado dentro |
-| RF-27 | — | — | — | Fora do escopo — editor de código |
+| RF-20 | US-23 | TELA-01, TELA-15 | `checkout_orders` somente se backend de cobrança vier a existir | Parcial: rota/interface; sem pagamento disponível |
+| RF-21 | não se aplica | não se aplica | não se aplica | Fora do escopo: quadro de vagas |
+| RF-22 | não se aplica | não se aplica | não se aplica | Fora do escopo: contato com empresas dentro da plataforma |
+| RF-23 | não se aplica | não se aplica | não se aplica | Fora do escopo nesta versão: envio de desafios de empresas |
+| RF-24 | não se aplica | não se aplica | não se aplica | Fora do escopo: chat |
+| RF-25 | não se aplica | não se aplica | não se aplica | Fora do escopo: videochamada |
+| RF-26 | US-26 | TELA-05 | `lessons.youtube_video_id` | Implementado no código: hospedagem fora; YouTube incorporado dentro |
+| RF-27 | não se aplica | não se aplica | não se aplica | Fora do escopo: editor de código |
 | RF-28 | US-24 | TELA-16 | `lessons` | Implementado em UI/migration; RLS remota pendente |
-| RF-29 | US-25 | TELA-16 | `lessons.youtube_video_id` | Implementado — hosts/formats allowlisted e só ID persistido |
-| RF-30 | US-25 | TELA-16 | Metadados de vídeo; persistência só após salvar a aula | Parcial — Edge Function implementada; Data API key necessária para publicar |
+| RF-29 | US-25 | TELA-16 | `lessons.youtube_video_id` | Implementado: hosts/formats allowlisted e só ID persistido |
+| RF-30 | US-25 | TELA-16 | Metadados de vídeo; persistência só após salvar a aula | Parcial: Edge Function implementada; Data API key necessária para publicar |
 | RF-31 | US-26 | TELA-05, TELA-19 | `lessons.youtube_video_id` | Implementado em `YouTubePlayer.jsx` |
 | RF-32 | US-27, US-29 | TELA-18, TELA-19 | `live_sessions`, vínculo `recording_lesson_id` a `lessons` | Implementado em UI/migration; RLS remota pendente |
 | RF-33 | US-28 | TELA-19 | `live_sessions`, `enrollments` | Implementado em UI/RLS versionada; exige enrollment ativo |
 | RF-34 | US-29 | TELA-18, TELA-19 | `live_attendance` (nome proposto) | Implementado via RPC de presença; RLS remota pendente |
 | RF-35 | US-30 | TELA-17 | RPCs Admin/Instrutor, `profiles`, `enrollments`, `mentor_students` | Implementado via duas RPCs; testes RLS escritos e ainda não executados |
-| RF-36 | US-31 | Todas as telas autenticadas | — (controle de navegação; RLS/RPC no servidor) | Implementado em rotas/sidebar; segurança real é RLS |
+| RF-36 | US-31 | Todas as telas autenticadas | não se aplica (controle de navegação; RLS/RPC no servidor) | Implementado em rotas/sidebar; segurança real é RLS |
 | RF-37 | US-32 | TELA-02, TELA-16, TELA-18, TELA-19 | Fixtures de demonstração | Implementado em dados demo, rotulados como exemplo |
 | RF-38 | US-26 | TELA-05 | `lesson_progress` | Implementado; conclusão manual |
 
-## 3. Matriz — regras de negócio e requisitos não funcionais
+## 3. Matriz: regras de negócio e requisitos não funcionais
 
 | Requisito | Histórias | Tela/escopo | Tabela lógica proposta | Status no código |
 |---|---|---|---|---|
@@ -62,7 +62,7 @@
 | RN-02 | US-09, US-10, US-14 | TELA-06, TELA-09 | `submissions`, `submission_versions`, `feedback` | Implementado via RPC; backend remoto pendente |
 | RN-03 | US-09, US-10 | TELA-06 | `submission_versions` | Implementado via versões append-only na RPC; depende de testar migration |
 | RN-04 | US-09 | TELA-06 | `activities`, `submissions` | A definir com a Altius; sem política no código |
-| RN-05, RN-11 | US-04, US-12, US-16, US-18, US-19, US-24, US-27, US-29 | Todas as telas com dados privados | `mentor_students`, `lessons`, `live_sessions` | Parcial — RLS/RPC versionadas; squads fora da implementação |
+| RN-05, RN-11 | US-04, US-12, US-16, US-18, US-19, US-24, US-27, US-29 | Todas as telas com dados privados | `mentor_students`, `lessons`, `live_sessions` | Parcial: RLS/RPC versionadas; squads fora da implementação |
 | RN-06 | US-13, US-14 | TELA-06, TELA-09 | `feedback`, `feedback_criteria` | Implementado; escala e critérios oficiais seguem A definir com a Altius |
 | RN-07 | US-16 | TELA-10 | `mentoring_sessions` | Implementado com data e anotações |
 | RN-08 | US-05, US-06, US-08 | TELA-03 a TELA-06 | `phases`, `activities`, `activity_criteria` | Parcial na landing; sem catálogo de plataforma |
@@ -74,12 +74,12 @@
 | RNF-01, RNF-10 | US-04, US-12, US-18, US-19, US-24, US-27 a US-31 | Todas as telas protegidas | Policies RLS para tabelas expostas | Migration versionada; aplicação e testes no Supabase pendentes |
 | RNF-02 | US-04, US-18, US-24 a US-31 | Acesso ao banco | Políticas RLS em tabelas Supabase expostas | Migration e testes SQL versionados em `supabase/`; ainda não executados |
 | RNF-03 | US-01 a US-04, US-16, US-24 a US-30 | Transversal | `profiles`, `audit_log` e política de retenção, se aplicável | Parcial como decisão em `CLAUDE.md`; controles não implementados |
-| RNF-04 | Todas | Todas as telas | — | Parcial como diretriz; área logada sem auditoria de acessibilidade |
-| RNF-05 | US-05 a US-21, US-24 a US-31 | TELA-03 a TELA-21 | — | Implementado como layout mobile first; requer validação manual de acessibilidade |
-| RNF-06 | US-05 a US-21, US-24 a US-31 | Transversal | — | Planejado; metas e medições não definidas |
+| RNF-04 | Todas | Todas as telas | não se aplica | Parcial como diretriz; área logada sem auditoria de acessibilidade |
+| RNF-05 | US-05 a US-21, US-24 a US-31 | TELA-03 a TELA-21 | não se aplica | Implementado como layout mobile first; requer validação manual de acessibilidade |
+| RNF-06 | US-05 a US-21, US-24 a US-31 | Transversal | não se aplica | Planejado; metas e medições não definidas |
 | RNF-07 | Todas as telas com persistência | Backend/operação | Backup e recuperação, não tabela de produto | Planejado; serviço e metas não definidos |
 | RNF-08 | US-18, US-19, US-24, US-27, US-29 | TELA-12, TELA-16, TELA-18 | `audit_log`, `attendance` | Implementado em migration; execução remota pendente |
-| RNF-09 | US-02 a US-04 | TELA-02, TELA-03 | Segredos no backend; sessão demo transitória | Parcial — demo bloqueada em build de produção |
+| RNF-09 | US-02 a US-04 | TELA-02, TELA-03 | Segredos no backend; sessão demo transitória | Parcial: demo bloqueada em build de produção |
 | RNF-11 | US-18, US-30 | TELA-12, TELA-17 | `audit_log`, RPCs com `SECURITY DEFINER`/`search_path` fixo | Implementado em migration e testes pendentes de execução |
 | RNF-12 | US-25, US-26 | TELA-05, TELA-16 | `lessons.youtube_video_id` | Implementado |
 

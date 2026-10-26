@@ -5,9 +5,9 @@ export const stateLabels = { not_started: 'Não iniciada', in_progress: 'Em anda
 export const axes = ['Explorar', 'Desenvolver', 'Aplicar', 'Decolar']
 export const competencies = ['Pensamento Analítico', 'IA & Big Data', 'Programação & Sistemas', 'Flexibilidade & Resiliência', 'Colaboração & Empatia', 'Liderança & Networking']
 export const phases = [
-  { name: 'Explorar', period: 'Meses 1–2', subtitle: 'Diagnose & base', activities: ['Assessment de perfil', 'Fundamentos de TI', 'Autoconhecimento', 'Plano individual'] },
-  { name: 'Desenvolver', period: 'Meses 3–5', subtitle: 'Capacitação intensiva', activities: ['Trilhas de hard skills', 'Workshops de soft skills', 'Projetos em grupo', 'Mentoria quinzenal'] },
-  { name: 'Aplicar', period: 'Meses 6–9', subtitle: 'Imersão & prática', activities: ['Projeto real em empresa', 'Hackathon interno', 'Simulação de entrevista', 'Portfólio técnico'] },
-  { name: 'Decolar', period: 'Meses 10–12', subtitle: 'Empregabilidade', activities: ['LinkedIn & branding', 'Conexão com parceiros', 'Processo seletivo real', 'Onboarding de carreira'] },
+  { name: 'Explorar', period: 'Meses 1 a 2', subtitle: 'Diagnose & base', activities: ['Assessment de perfil', 'Fundamentos de TI', 'Autoconhecimento', 'Plano individual'] },
+  { name: 'Desenvolver', period: 'Meses 3 a 5', subtitle: 'Capacitação intensiva', activities: ['Trilhas de hard skills', 'Workshops de soft skills', 'Projetos em grupo', 'Mentoria quinzenal'] },
+  { name: 'Aplicar', period: 'Meses 6 a 9', subtitle: 'Imersão & prática', activities: ['Projeto real em empresa', 'Hackathon interno', 'Simulação de entrevista', 'Portfólio técnico'] },
+  { name: 'Decolar', period: 'Meses 10 a 12', subtitle: 'Empregabilidade', activities: ['LinkedIn & branding', 'Conexão com parceiros', 'Processo seletivo real', 'Onboarding de carreira'] },
 ]
 export const exampleText = 'A definir com a Altius'

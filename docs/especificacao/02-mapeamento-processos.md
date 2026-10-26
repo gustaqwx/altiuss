@@ -1,4 +1,4 @@
-# 02 — Mapeamento de processos
+# 02 :  Mapeamento de processos
 
 > **Status:** proposta de processo futuro (TO-BE), não validada com a operação. O AS-IS abaixo registra somente o que as fontes permitem afirmar. Diagramas TO-BE são hipóteses de desenho e não descrevem funcionalidades já prontas.
 
@@ -99,7 +99,7 @@ flowchart LR
 
 ### 3.2 Processos propostos em detalhe
 
-#### P-01 — Ingresso, cadastro e promoção de perfil
+#### P-01 :  Ingresso, cadastro e promoção de perfil
 
 - **Gatilho:** pessoa solicita acesso à plataforma.
 - **Atores:** Aluno, Admin; serviço de autenticação e backend.
@@ -109,7 +109,7 @@ flowchart LR
 - **Dores que pode resolver:** perda de clareza sobre quem pode acessar cada área (**Hipótese a validar**).
 - **A definir com a Altius:** aprovação de novos cadastros, campos necessários, verificação de identidade, como selecionar Admin e se a promoção exige aprovação adicional.
 
-#### P-02 — Estudo de uma trilha
+#### P-02 :  Estudo de uma trilha
 
 - **Gatilho:** aluno recebe ou consulta seu plano individual.
 - **Atores:** Aluno; equipe Altius que mantém conteúdo; backend.
@@ -119,7 +119,7 @@ flowchart LR
 - **Dores que pode resolver:** dificuldade de encontrar conteúdo e entender o próximo passo (**Hipótese a validar**).
 - **A definir com a Altius:** estrutura do conteúdo, mídia suportada, progresso mínimo por aula, liberação sequencial ou livre e regra de personalização.
 
-#### P-03 — Envio e revisão de entrega individual
+#### P-03 :  Envio e revisão de entrega individual
 
 - **Gatilho:** aluno inicia atividade disponibilizada na sua jornada.
 - **Atores:** Aluno, Mentor associado, backend; serviço de storage se houver arquivo.
@@ -129,7 +129,7 @@ flowchart LR
 - **Dores que pode resolver:** dificuldade de acompanhar versões e localizar feedback (**Hipótese a validar**).
 - **A definir com a Altius:** prazo e política de atraso, formato máximo de envio, critérios/pesos, quem revisa, prazo de revisão e se uma entrega aprovada pode ser reaberta.
 
-#### P-04 — Entrega de squad
+#### P-04 :  Entrega de squad
 
 - **Gatilho:** atividade de grupo é disponibilizada para um squad.
 - **Atores:** alunos do squad, Mentor associado e Admin/equipe Altius conforme permissões.
@@ -139,7 +139,7 @@ flowchart LR
 - **Dores que pode resolver:** falta de clareza de autoria, acompanhamento do grupo e feedback (**Hipótese a validar**).
 - **A definir com a Altius:** composição heterogênea, tamanho dos grupos, mudanças de integrantes, autoria da entrega, feedback coletivo/individual e dados visíveis a cada participante.
 
-#### P-05 — Registro de mentoria quinzenal
+#### P-05 :  Registro de mentoria quinzenal
 
 - **Gatilho:** realização de uma sessão de mentoria no ciclo quinzenal.
 - **Atores:** Aluno e Mentor; backend.
@@ -149,7 +149,7 @@ flowchart LR
 - **Dores que pode resolver:** perda de continuidade entre encontros (**Hipótese a validar**).
 - **A definir com a Altius:** quem registra, quem visualiza, edição/correção, prazo de retenção e eventual registro de ausência. Este requisito não define formato, duração ou pauta da sessão.
 
-#### P-06 — Simulação de entrevista
+#### P-06 :  Simulação de entrevista
 
 - **Gatilho:** aluno participa de uma simulação prevista no programa.
 - **Atores:** Aluno e Mentor/avaliador; backend. Ferramenta de live coding, se necessária, é externa à plataforma nesta especificação.
@@ -159,17 +159,17 @@ flowchart LR
 - **Dores que pode resolver:** feedback disperso após simulação (**Hipótese a validar**).
 - **A definir com a Altius:** formato de live coding e fit cultural, critérios, uso de ferramentas externas, gravação (não presumida), acesso e retenção das avaliações.
 
-#### P-07 — Conclusão de fase
+#### P-07 :  Conclusão de fase
 
 - **Gatilho:** aluno conclui atividades ou chega ao período de encerramento de uma fase.
 - **Atores:** Aluno, Mentor e Admin/equipe Altius conforme critérios definidos.
 - **TO-BE:** plataforma reúne progresso e entregas → verifica regra de conclusão aprovada pela Altius → apresenta pendências → encaminha para decisão automática ou humana conforme política → atualiza fase se autorizado.
 - **Regras relacionadas:** RN-02, RN-04 e RN-08; RF-07, RF-08 e RF-14.
-- **Situação no código:** **Parcial** — fase/progresso exibidos, mas critérios de conclusão e avanço ainda não foram definidos.
+- **Situação no código:** **Parcial** :  fase/progresso exibidos, mas critérios de conclusão e avanço ainda não foram definidos.
 - **Dores que pode resolver:** incerteza sobre progresso e requisitos para avançar (**Hipótese a validar**).
 - **A definir com a Altius:** critérios de conclusão, tratamento de pendências, exceções, necessidade de aprovação humana e se calendário define fase ou apenas orienta.
 
-#### P-08 — Administração de acessos e visão geral
+#### P-08 :  Administração de acessos e visão geral
 
 - **Gatilho:** usuário precisa de acesso de Mentor ou Admin precisa revisar acompanhamento.
 - **Atores:** Admin; backend.
@@ -179,7 +179,7 @@ flowchart LR
 - **Dores que pode resolver:** falta de visibilidade operacional (**Hipótese a validar**).
 - **A definir com a Altius:** papéis de equipe, dados do painel, mudanças de vínculo, trilha de auditoria e ações que exigem confirmação.
 
-#### P-09 — Criar e publicar vídeo-aula
+#### P-09 :  Criar e publicar vídeo-aula
 
 - **Gatilho:** Admin ou Instrutor prepara novo conteúdo de aula.
 - **Atores:** Admin, Instrutor autor, YouTube/oEmbed ou Edge Function.
@@ -190,7 +190,7 @@ flowchart LR
 - **Limites de acesso:** Admin pode gerir todas as aulas; Instrutor apenas as próprias; aluno/mentor lê publicada. O ID, nunca a URL digitada, é armazenado/renderizado.
 - **A definir com a Altius:** allowlist de domínios, campos do formulário além de eixo/posição/status, papel que publica, política de exclusão/histórico e credencial/serviço para verificar incorporação.
 
-#### P-10 — Gerenciar e participar de aula ao vivo
+#### P-10 :  Gerenciar e participar de aula ao vivo
 
 - **Gatilho:** Admin ou Instrutor autor agenda uma sessão.
 - **Atores:** Admin, Instrutor autor, Aluno/Mentor autenticados e matriculados.
@@ -201,7 +201,7 @@ flowchart LR
 - **Limites de acesso:** somente usuário logado e matriculado vê link/player. Não incluir chat. Sessão cancelada permanece visível como cancelada.
 - **A definir com a Altius:** estados além de agendada/cancelada, regras de gravação, horário, permissões de edição e política se a transmissão falhar.
 
-#### P-11 — Lista restrita de alunos, presença e administração de Instrutor
+#### P-11 :  Lista restrita de alunos, presença e administração de Instrutor
 
 - **Gatilho:** Instrutor prepara aula, registra presença ou Admin revisa papéis.
 - **Atores:** Instrutor, Admin e backend Supabase.

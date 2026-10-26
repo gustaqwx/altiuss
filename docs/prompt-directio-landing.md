@@ -70,10 +70,10 @@ Tecnologia, comunidade e acompanhamento humano.
 ### Roadmap (12 meses, 4 fases)
 | Fase | Período | Nome | Entregas |
 |---|---|---|---|
-| Explorar | Meses 1–2 | Diagnose & base | Assessment de perfil, Fundamentos de TI, Autoconhecimento, Plano individual |
-| Desenvolver | Meses 3–5 | Capacitação intensiva | Trilhas de hard skills, Workshops de soft skills, Projetos em grupo, Mentoria quinzenal |
-| Aplicar | Meses 6–9 | Imersão & prática | Projeto real em empresa, Hackathon interno, Simulação de entrevista, Portfólio técnico |
-| Decolar | Meses 10–12 | Empregabilidade | LinkedIn & branding, Conexão com parceiros, Processo seletivo real, Onboarding de carreira |
+| Explorar | Meses 1 a 2 | Diagnose & base | Assessment de perfil, Fundamentos de TI, Autoconhecimento, Plano individual |
+| Desenvolver | Meses 3 a 5 | Capacitação intensiva | Trilhas de hard skills, Workshops de soft skills, Projetos em grupo, Mentoria quinzenal |
+| Aplicar | Meses 6 a 9 | Imersão & prática | Projeto real em empresa, Hackathon interno, Simulação de entrevista, Portfólio técnico |
+| Decolar | Meses 10 a 12 | Empregabilidade | LinkedIn & branding, Conexão com parceiros, Processo seletivo real, Onboarding de carreira |
 
 **CTA final:** Garanta sua vaga (WhatsApp)
 

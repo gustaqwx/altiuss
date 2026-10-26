@@ -107,19 +107,6 @@ export function useLandingMotion() {
         }));
       }
 
-      // GATILHO DE SCROLL (ticket 08): o computador gira conforme o scroll do hero e inclina com o ponteiro
-      if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        gsap.fromTo('#pc', { rotationY: -26, rotationX: -15 }, {
-          rotationY: 14, rotationX: -7, ease: 'none',
-          scrollTrigger: { trigger: '#programa', start: 'top top', end: 'bottom top', scrub: true }
-        });
-        if (window.matchMedia('(pointer: fine)').matches) {
-          document.getElementById('programa').addEventListener('pointermove', e => {
-            gsap.to('.pc-tilt', { rotationY: (e.clientX / innerWidth - 0.5) * 20, rotationX: -(e.clientY / innerHeight - 0.5) * 12, duration: 0.8, ease: 'power3.out', overwrite: 'auto' });
-          }, { signal });
-        }
-      }
-
       // GATILHO DE ANIMAÇÃO: cards de benefícios entram com fade e subida, em sequência por linha
       if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         gsap.set('.ben-card', { y: 32, opacity: 0 });

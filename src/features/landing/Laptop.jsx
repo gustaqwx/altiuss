@@ -45,7 +45,7 @@ export default function Laptop() {
                     <span className="lt-brand">Altius Directio</span>
                     <p className="lt-h">Seu passo decisivo na carreira de tecnologia começa aqui.</p>
                     <p className="lt-sub">Hard e soft skills baseadas no Future of Jobs Report do WEF.</p>
-                    <span className="lt-cta">Garanta sua vaga</span>
+                    <span className="lt-cta">Começar agora</span>
                     <div className="lt-foot">
                       <p className="lt-big">12<small>meses</small></p>
                       <ol className="lt-road">{PHASES.map((p) => <li key={p}>{p}</li>)}</ol>

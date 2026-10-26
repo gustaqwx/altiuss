@@ -1,4 +1,4 @@
-# 03 — Plano de entrevistas
+# 03 :  Plano de entrevistas
 
 > **Status:** roteiro de pesquisa; nenhuma resposta ou entrevista foi registrada neste arquivo. O texto-base de consentimento deve ser revisado e aprovado pela Altius antes de uso.
 
@@ -104,10 +104,10 @@ As perguntas podem ser adaptadas ao que a pessoa contar. Solicitar exemplos rece
 - Manter respostas e gravações em local com acesso restrito, prazo de retenção e responsável **A definir com a Altius**.
 - **Sugestão inicial:** convidar de 3 a 5 pessoas por perfil (incluindo Instrutores, se já houver) na primeira rodada e ajustar a amostra conforme diversidade de experiências e temas recorrentes. É uma sugestão qualitativa, não amostra estatística nem número de participantes já entrevistados.
 
-## 5. Modelo em branco — registro de entrevista
+## 5. Modelo em branco :  registro de entrevista
 
 ```markdown
-### Entrevista — [código, sem nome no documento de síntese]
+### Entrevista :  [código, sem nome no documento de síntese]
 
 - Data:
 - Perfil: [Equipe Altius / Mentor / Aluno / Egresso potencial]
@@ -140,10 +140,10 @@ As perguntas podem ser adaptadas ao que a pessoa contar. Solicitar exemplos rece
 -
 ```
 
-## 6. Modelo em branco — síntese entre entrevistas
+## 6. Modelo em branco :  síntese entre entrevistas
 
 ```markdown
-### Síntese — [tema]
+### Síntese :  [tema]
 
 - Período da rodada:
 - Perfis ouvidos (quantidade real, depois da coleta):
@@ -165,7 +165,7 @@ As perguntas podem ser adaptadas ao que a pessoa contar. Solicitar exemplos rece
 
 ## 7. Texto-base de consentimento para validar
 
-> **Rascunho — validar com a Altius antes de usar.** Ajustar finalidade, responsáveis, canal de contato, base legal, armazenamento, retenção e direitos dos titulares ao processo real. Não iniciar gravação antes de autorização específica.
+> **Rascunho :  validar com a Altius antes de usar.** Ajustar finalidade, responsáveis, canal de contato, base legal, armazenamento, retenção e direitos dos titulares ao processo real. Não iniciar gravação antes de autorização específica.
 
 “Estamos convidando você para uma conversa sobre a experiência e as necessidades relacionadas ao programa Altius Directio e à possível plataforma de apoio. A participação é voluntária. Você pode deixar de responder a qualquer pergunta ou encerrar a conversa, sem prejuízo à sua participação no programa ou à sua relação com a Altius. O objetivo é compreender processos e necessidades; não estamos avaliando seu desempenho.
 
@@ -173,7 +173,7 @@ As anotações serão usadas para analisar requisitos do produto. Não inclua da
 
 Separadamente, pedimos autorização para gravar áudio: [sim/não]. A gravação não será feita se você não autorizar. A finalidade, quem terá acesso e o prazo de retenção da gravação devem ser apresentados antes de iniciar: [A definir com a Altius]. Você pode fazer perguntas antes de decidir.”
 
-**Registro de decisão:** aceito participar? [sim/não] — autorizo gravação de áudio? [sim/não/não solicitada] — data: [ ] — responsável por registrar: [ ].
+**Registro de decisão:** aceito participar? [sim/não] :  autorizo gravação de áudio? [sim/não/não solicitada] :  data: [ ] :  responsável por registrar: [ ].
 
 ## 8. Suposições e lacunas
 

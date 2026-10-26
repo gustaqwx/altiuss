@@ -1,8 +1,8 @@
 export const authContent = {
   eyebrow: 'Altius Directio',
   title: {
-    login: 'Entre na sua jornada',
-    register: 'Comece sua jornada',
+    login: 'Entrar na sua conta',
+    register: 'Entrar na sua conta',
     recovery: 'Recupere seu acesso',
     reset: 'Defina uma nova senha',
   },
@@ -18,4 +18,6 @@ export const authContent = {
   nameLabel: 'Nome',
   appleLabel: 'Continuar com Apple',
   submit: { login: 'Entrar', register: 'Criar conta', recovery: 'Enviar instruções', reset: 'Salvar nova senha' },
+  termsLabel: 'Li e concordo com os <a href="/termos" className="underline hover:text-accent">Termos de Uso</a> e a <a href="/privacidade" className="underline hover:text-accent">Política de Privacidade</a>.',
+  termsRequired: 'Você deve aceitar os Termos de Uso e a Política de Privacidade para continuar.',
 }

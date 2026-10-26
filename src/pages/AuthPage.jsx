@@ -9,7 +9,7 @@ const modeLink = { login: ['/registro', 'Criar conta'], register: ['/login', 'JÃ
 
 export default function AuthPage({ mode }) {
   const { session, demoEnabled, signInDemo, signIn, signUp, requestPasswordRecovery, signInWithApple, updatePassword } = useAuth()
-  const [form, setForm] = useState({ name: '', email: '', password: '' })
+  const [form, setForm] = useState({ name: '', email: '', password: '', acceptTerms: false })
   const [errors, setErrors] = useState({})
   const [message, setMessage] = useState('')
   const [demoRole, setDemoRole] = useState('student')
@@ -28,6 +28,9 @@ export default function AuthPage({ mode }) {
   async function submit(event) {
     event.preventDefault()
     const nextErrors = validateCredentials({ ...form, mode })
+    if (mode === 'register' && !form.acceptTerms) {
+      nextErrors.acceptTerms = authContent.termsRequired
+    }
     setErrors(nextErrors)
     if (Object.keys(nextErrors).length) return
     setBusy(true)
